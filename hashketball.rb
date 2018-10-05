@@ -171,7 +171,10 @@ def teams
 end
 
 def players
-  game_hash[:home][:players].merge(game_hash[:away][:players])
+  #game_hash[:home][:players].merge(game_hash[:away][:players])
+  game_hash[:home][:players].each do |players, name|
+    binding.pry
+  end
 end
 
 def find_the_team(team_name)
